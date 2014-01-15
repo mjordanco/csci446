@@ -3,4 +3,124 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+
+ /* Hello Grader
+  * Variables - Everywhere, _colors.scss, up here in this file, all throughout the css
+  * Nesting - A few places, but see #content
+  * Partials - Use the _font.scss partial and another for colors
+  * Mixins - see header-text mixin
+  * Inheritance - 2 places, but one is footer
+  * Operators - I use color functions a lot, but I use operators when declaring the variable nav-list-horizontal-padding
+  */
+
 @import "compass/reset";
+@import "font";
+@import "colors";
+
+//Big text with a specified color
+@mixin header-text($color) {
+	font-family: 'ciclefina';
+	color: $color;
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+
+
+//DIMENS
+$header-padding: 25px;
+$nav-list-padding: 4px;
+$nav-list-horizontal-padding: $nav-list-padding * 4;
+$content-padding: 48px;
+
+body {
+	background-color: $body-background-color;
+	color: $text-color;
+	
+}
+
+//Big ol' top section
+header {
+	padding: $header-padding;
+	background-color: $header-background-color;
+	overflow: hidden;
+}
+
+//There's a copyright down here
+footer {
+	@extend header;
+	width:100%;
+
+	//Magical floating footer that follows your screen!
+	position: fixed;
+	bottom: 0;
+
+	text-align: center;
+}
+
+#content {
+	padding: $content-padding;
+	float:left;
+
+	h1 {
+		@include header-text($text-color);
+	}
+}
+
+#sidebar {
+	float: right;
+	width:20%;
+}
+
+#quote {
+	width:33%;
+	@include header-text($header-text-color);
+}
+
+#login {
+	background-color: lighten($body-background-color, 20%);
+	padding:24px;
+}
+
+#catfacts {
+	@extend #login;
+	margin: 24px;
+
+	h1 {
+		text-align: center;
+		@include header-text($text-color);
+	}
+
+	a {
+		display: block;
+		margin-top: 10px;
+		color: $text-color;
+	}
+}
+
+nav {
+	float: right;
+	margin-top: -15px;
+}
+
+ul {
+
+	li {
+		//Make those pretty list items up in the nav.
+		background-color: white;
+		margin-left:13px;
+		padding: $nav-list-padding;
+		padding-left: $nav-list-horizontal-padding;
+		padding-right: $nav-list-horizontal-padding;
+
+		//One line.
+		display: inline;
+
+		//rounded corners
+		border-radius:25px;
+	}
+}
+
+a {
+	color: $header-background-color;
+	text-decoration: none;
+}

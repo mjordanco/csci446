@@ -1,0 +1,6 @@
+//COLORS
+$body-background-color: #336699;
+$header-background-color: darken($body-background-color, 25%);
+$footer-background-color: lighten($body-background-color, 50%);
+$header-text-color: lighten($body-background-color, 40%);
+$text-color: lighten($body-background-color, 80%);
