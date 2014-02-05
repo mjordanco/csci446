@@ -1,0 +1,9 @@
+<h1>Foster Agreement</h1>
+<% image_url = @pet.image_url %>
+<% if image_url == nil then image_url = "http://www.wwubap.org/wp-content/uploads/2012/03/no-available-image.png" end %>
+<div class="picture_frame"><%= image_tag image_url, :class => "inline_image" %></div>
+<p>I the undersigned hereby do affirm that I shall take really 
+	good care of <b><%= @pet.name %></b>, for he is but <b>
+	<%= @pet.age %></b> years of age, and as such is a darling
+	new pet for me.
+</p>

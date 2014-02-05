@@ -1,0 +1,37 @@
+<h1>Listing pets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Species</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Age</th>
+      <th>Okay with Kids</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pets.each do |pet| %>
+      <tr>
+        <td class="picture_frame"><%= image_tag(pet.image_url, :class => "inline_image") %></td>
+        <td><%= pet.species %></td>
+        <td><%= pet.name %></td>
+        <td><%= pet.description %></td>
+        <td><%= pet.age %></td>
+        <td><%= (pet.kids ? "Yes" : "No/Unknown") %></td>
+        <td><%= link_to 'Show', pet %></td>
+        <td><%= link_to 'Edit', edit_pet_path(pet) %></td>
+        <td><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pet', new_pet_path %>

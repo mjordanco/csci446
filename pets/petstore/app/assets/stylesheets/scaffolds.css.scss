@@ -1,0 +1,129 @@
+body {
+  background-color: #003366;
+  color: #ddd;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+.picture_frame {
+  background-color: #FFF;
+  width: 60px;
+  height: 48px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+}
+
+.inline_image {
+  max-width: 60px;
+  max-height: 48px;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+}
+
+table {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+td {
+  padding: 20px;
+  text-align: center;
+}
+
+header {
+  background-color: #114477;
+  line-height: 130px;
+  font-size: 60px;
+}
+
+form {
+  margin-top: 25px;
+}
+
+a:link, a:visited, a:hover, a:active {color:#bbb;} 
+
+nav {
+  display: block;
+  float: left;
+
+  background-color: #225588;
+
+  margin-right: 50px;
+  padding: 25px;
+
+  overflow: collapse;
+}
+
+nav ul {
+
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
