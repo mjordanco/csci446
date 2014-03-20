@@ -1,0 +1,28 @@
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Species</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Age</th>
+      <th>Okay with Kids</th>
+    </tr>
+  </thead>
+	<% @pets.each do |pet| %>
+		<tr>
+				<% image_url = pet.image_url %>
+				<% if image_url == nil then image_url = "http://www.wwubap.org/wp-content/uploads/2012/03/no-available-image.png" end %>
+        <td class="picture_frame"><%= image_tag(image_url, :class => "inline_image") %></td>
+        <td><%= pet.species %></td>
+        <td><%= link_to pet.name, pet %></td>
+        <td><%= pet.description %></td>
+        <td><%= pet.age %></td>
+        <td><%= (pet.kids ? "Yes" : "No/Unknown") %></td>
+        <td><%= link_to "Begin adoption process", fosteragreement_index_path(:pet_id => pet) %>
+        <td><%= button_to 'Mark as considered', person_pet_considerations_path(:pet_id => pet), :remote => true %></td>
+      </tr>
+	<% end %>
+</table>
+
+<%= link_to "Put a pet up for Adoption", new_pet_path %>

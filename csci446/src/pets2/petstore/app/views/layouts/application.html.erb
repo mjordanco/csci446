@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Petstore</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header>Adoption Front</header>
+
+<nav>
+	<ul>
+		<li><%= link_to "Home", adoptionfront_index_path %></li>
+		<li><%= link_to "Add a Pet", new_pet_path %></li>
+	</ul>
+	<div id="considering">
+		<%= render @considering %>
+	</div>
+</nav>
+
+<main>
+	<%= yield %>
+</main>
+
+</body>
+</html>

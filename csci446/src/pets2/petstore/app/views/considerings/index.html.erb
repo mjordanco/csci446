@@ -1,0 +1,25 @@
+<h1>Listing considerings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @considerings.each do |considering| %>
+      <tr>
+        <td><%= link_to 'Show', considering %></td>
+        <td><%= link_to 'Edit', edit_considering_path(considering) %></td>
+        <td><%= link_to 'Destroy', considering, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Considering', new_considering_path %>

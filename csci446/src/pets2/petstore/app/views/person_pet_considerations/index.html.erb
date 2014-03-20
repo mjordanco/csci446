@@ -1,0 +1,29 @@
+<h1>Listing person_pet_considerations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pet</th>
+      <th>Considering</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @person_pet_considerations.each do |person_pet_consideration| %>
+      <tr>
+        <td><%= person_pet_consideration.pet_id %></td>
+        <td><%= person_pet_consideration.considering_id %></td>
+        <td><%= link_to 'Show', person_pet_consideration %></td>
+        <td><%= link_to 'Edit', edit_person_pet_consideration_path(person_pet_consideration) %></td>
+        <td><%= link_to 'Destroy', person_pet_consideration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Person pet consideration', new_person_pet_consideration_path %>

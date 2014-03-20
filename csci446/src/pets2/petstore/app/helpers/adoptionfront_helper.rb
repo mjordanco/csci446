@@ -1,0 +1,2 @@
+module AdoptionfrontHelper
+end
