@@ -1,0 +1,38 @@
+body {
+	color: #CCCCCC;
+	background-color: black;
+}
+
+header {
+	color: #FFFFFF;
+	background-color: #333333;
+	padding: 10px;
+}
+
+footer {
+	color: #FFFFFF;
+	background-color: #333333;
+	padding: 10px;
+}
+
+h1 {
+	display: inline;
+}
+
+select {
+	float: right;
+}
+
+table {
+	width: 100%;
+}
+
+tr {
+	background-color: #444444;
+}
+
+td {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
