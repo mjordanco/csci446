@@ -1,0 +1,34 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript">
+function sort(select) {
+	var value = select.options[select.selectedIndex].value;
+	if (value != "nosort") {
+		document.location = "list?sort=" + value;
+	}
+}
+
+
+</script>
+</head>
+<body>
+
+	<header>
+		<h1>Look at my Books!</h1>
+		<select onchange="sort(this);">
+			<option value="nosort">Sort By:</option>
+			<option value="id">Rank</option>
+			<option value="title">Title</option>
+			<option value="author">Author</option>
+			<option value="language">Language</option>
+			<option value="published">Year Published</option>
+		</select>
+	</header>
+<%= yield %>
+</body>
+	<footer>
+		<h2>My books are amazing</h2>
+	</footer>
+</body>
+</html>

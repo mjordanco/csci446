@@ -8,5 +8,8 @@ end
 
 get '/list' do
 	@sortby = params[:sort]
+	if @sortby == nil
+		@sortby = 'id'
+	end
 	erb :books_list
 end
